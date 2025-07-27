@@ -1,6 +1,6 @@
 # 🔬 High-Performance Retinal Vessel Segmentation
 
-> A modular, scalable, and reproducible deep learning pipeline for retinal vessel segmentation — built with research-grade software engineering principles inspired by labs like Google DeepMind.
+> A modular, scalable, and reproducible deep learning pipeline for retinal vessel segmentation — built with research-grade software engineering principles.
 
 ---
 
