@@ -70,8 +70,8 @@ vessel-segmentation/
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-cd vessel-segmentation
+git clone git@github.com:es15326/Vessel-Segmentation.git
+cd Vessel-Segmentation
 ```
 
 ### 2. Create Environment & Install Dependencies
