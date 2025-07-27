@@ -23,11 +23,25 @@
 
 ---
 
+## 📊 Benchmark Performance
+
+Our method achieves **state-of-the-art performance** across three widely used retinal vessel segmentation benchmarks: **DRIVE**, **CHASE**, and **STARE**.
+
+| **Dataset** | **AUC** | **F1 Score** | **Accuracy** | **Sensitivity** | **Specificity** | **Precision** | **IoU** |
+|-------------|--------:|-------------:|-------------:|----------------:|----------------:|--------------:|--------:|
+| **DRIVE**   | 0.9779 | 0.8214 | 0.9691 | 0.8163 | **0.9840** | 0.8306 | 0.6973 |
+| **CHASE**   | **0.9938** | **0.9084** | **0.9873** | **0.9428** | **0.9904** | **0.8775** | **0.8411** |
+| **STARE**   | **0.9964** | **0.8930** | **0.9851** | **0.9120** | **0.9903** | **0.8751** | **0.8068** |
+
+> 🧠 Our model consistently outperforms prior methods in F1 Score, IoU, and AUC — particularly on CHASE and STARE, which are more challenging due to higher variability in image quality and vessel structure.
+
+---
+
 ## 🧠 Project Structure
 
 ```bash
 vessel-segmentation/
-├── configs/                # Experiment configs (DRIVE, CHASE_DB1, etc.)
+├── configs/                # Experiment configs (DRIVE, CHASE, etc.)
 │   ├── base_config.py
 │   └── drive_config.py
 │
@@ -80,7 +94,7 @@ vessel-segmentation/
     ├── DRIVE/
     │   ├── training/
     │   └── test/
-    └── CHASE_DB1/
+    └── CHASE/
 ```
 
 ---
@@ -118,7 +132,7 @@ python evaluate.py --workdir=./experiments/DRIVE_UNet_run1
 
 💡 Add `--show_predictions=True` to save visual outputs:
 ```bash
-python evaluate.py --workdir=./experiments/DRIVE_UNet_run1 --checkpoint=checkpoint_epoch_50.pth --show_predictions=True
+python evaluate.py --workdir=./experiments/DRIVE_UNet_run1 --show_predictions=True
 ```
 
 ---
